@@ -1,11 +1,13 @@
 const {Given,When,Then} = require('@cucumber/cucumber');
 const {expect} = require('@playwright/test');
+const {queuePage} = require('../../pageobjects/queuePage');
+
 
 
   //Implementation in Queue page
-  Given('The user select Queue item from Getstarted icon', async function () {
-
-      await this.homepage.getStartQueue_fn();
+  Given('The user select Queue from Getstarted icon', async function () {
+      this.queuePage = this.POManager.getQueuePage();
+      await this.queuePage.getStartQueue_fn();
 
     });
 
@@ -15,7 +17,7 @@ const {expect} = require('@playwright/test');
 
 
   When('The user clicks on the Implementation using array in Queue link', async function () {
-       this.queuePage = this.poManger.getQueuePage();
+      // this.queuePage = this.POManager.getQueuePage();
        
         await this.queuePage.imp_array_queue_fn();
   });

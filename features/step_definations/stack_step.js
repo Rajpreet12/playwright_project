@@ -1,11 +1,12 @@
 const {Given,When,Then} = require('@cucumber/cucumber');
 const {expect} = require('@playwright/test');
+const {stacksPage} = require('../../pageobjects/stacksPage');
 
 
   //Implementation in Stack page
-  Given('The user select stack item from Getstarted icon', async function () {
-      this.stacksPage = this.poManger.getStackPage();
-      await this.homepage.getStartStack_fn();
+  Given('The user select stack from Getstarted icon', async function () {
+      this.stacksPage = this.POManager.getStackPage();
+      await this.stacksPage.getStartStack_fn();
 
     });
 
@@ -15,7 +16,7 @@ const {expect} = require('@playwright/test');
 
 
   When('The user clicks on the Implementation in Stack link', async function () {
-       this.stacksPage = this.poManger.getStackPage();
+       //this.stacksPage = this.poManger.getStackPage();
        
         await this.stacksPage.implementatin_stack_fn();
   });
@@ -27,7 +28,7 @@ const {expect} = require('@playwright/test');
   });
 
   When('The user clicks Try Here in stack', async function () {
-      
+     // this.stacksPage = this.POManager.getStackPage();
         await this.stacksPage.tryhere_stack_fn();
   });
 
@@ -38,7 +39,7 @@ const {expect} = require('@playwright/test');
   });
 
   When('User type code {string} in the tryEditor', async function (phythonCode) {
-      this.stacksPage = this.poManger.getStackPage();
+      //this.stacksPage = this.POManager.getStackPage();
         await this.stacksPage.codeTryArea_stack_fn(phythonCode);
     
   });

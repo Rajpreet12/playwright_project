@@ -2,6 +2,7 @@ class stacksPage{
 
     constructor(page){
         this.page = page;
+        this.stack_getStart = page.locator("a[href='stack']");
         this.oprtn_stack = page.getByRole('link', { name: 'Operations in Stack' });
         this.implemntn_stack = page.getByRole('link', {name:'Implementation'});
         this.tryHere_stack = page.locator('.btn.btn-info');
@@ -63,6 +64,9 @@ class stacksPage{
          });
         // Trigger an action that causes an alert
          await this.runBtn_stack.click();
+    }
+    async getStartStack_fn(){
+        await this.stack_getStart.click();
     }
 
 }

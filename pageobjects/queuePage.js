@@ -2,6 +2,7 @@ class queuePage{
 
     constructor(page){
         this.page = page;
+        this.queue_getStart = page.locator("a[href='queue']");
         this.imp_array_in_queue = page.getByRole('link', { name: 'Implementation using array' });
         this.tryHere_queue = page.locator('.btn.btn-info');
         this.codeEditor = page.locator(".CodeMirror.cm-s-default");
@@ -52,6 +53,9 @@ class queuePage{
          });
         // Trigger an action that causes an alert
          await this.runBtn_queue.click();
+    }
+    async getStartQueue_fn(){
+        await this.queue_getStart.click();
     }
 
 }
