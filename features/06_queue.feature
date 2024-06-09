@@ -7,7 +7,7 @@ Feature: Queue Page
 
 
   Scenario: Navigate to Implementation of Queue in Python and valid code in TryEditor in Queue page
-    Given The user select Queue item from Getstarted icon
+    Given The user select Queue from Getstarted icon
     Then The user is directed to Queue Page
     When The user clicks on the Implementation using array in Queue link
     Then The user is directed to Implementation using array in Queue Page
@@ -17,7 +17,7 @@ Feature: Queue Page
     Then User clicks Run button and Result is printed below in Queue
     
   Scenario: Navigate to Implementation of Queue in Python and In_valid code in TryEditor in Queue page
-    Given The user select Queue item from Getstarted icon
+    Given The user select Queue from Getstarted icon
     Then The user is directed to Queue Page
     When The user clicks on the Implementation using array in Queue link
     Then The user is directed to Implementation using array in Queue Page

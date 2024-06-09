@@ -7,7 +7,7 @@ Feature: Stack Page
     
 
    Scenario: Navigate to Implementation and valid code in TryEditor in Stack page
-     Given The user select stack item from Getstarted icon
+     Given The user select stack from Getstarted icon
      Then The user is directed to Stack Page
      When The user clicks on the Implementation in Stack link
      Then The user is directed to Implementation in Stack Page
@@ -17,7 +17,7 @@ Feature: Stack Page
      Then User clicks Run button and Result is printed below
     
    Scenario: Navigate to Implementation and In_valid code in TryEditor in Stack page
-     Given The user select stack item from Getstarted icon
+     Given The user select stack from Getstarted icon
      Then The user is directed to Stack Page
      When The user clicks on the Implementation in Stack link
      Then The user is directed to Implementation in Stack Page
