@@ -15,8 +15,8 @@ class stacksPage{
     
         await this.page.waitForLoadState(); // Ensure the new page is fully loaded 
         const title = await this.page.title(); // Await the asynchronous title() method
-            console.log('Child page title:',title);
-           return  title;
+        console.log('Child page title:',title);
+        return  title;
         
     }
     async op_in_stack_fn(){
