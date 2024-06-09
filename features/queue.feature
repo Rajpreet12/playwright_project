@@ -1,9 +1,9 @@
 Feature: Queue Page
 
-Background: Sucessful login functionality
-    Given Login to the DSALGO website 
-    When Enter valid Username And Password
-    Then successfully login
+ Background: valid successful login functionality
+    Given user is on the login page
+    When enter valid username and password
+    Then successful login
 
 
   Scenario: Navigate to Implementation of Queue in Python and valid code in TryEditor in Queue page
@@ -13,8 +13,8 @@ Background: Sucessful login functionality
     Then The user is directed to Implementation using array in Queue Page
     When The user clicks Try Here in Queue
     Then The tryEditor box appears in Queue
-    When User type code "print 'Hello'" in the tryEditor
-    Then User clicks Run button and Result is printed below
+    When User type code "print 'Hello'" in the tryEditor in Queue
+    Then User clicks Run button and Result is printed below in Queue
     
   Scenario: Navigate to Implementation of Queue in Python and In_valid code in TryEditor in Queue page
     Given The user select Queue item from Getstarted icon
@@ -23,5 +23,5 @@ Background: Sucessful login functionality
     Then The user is directed to Implementation using array in Queue Page
     When The user clicks Try Here in Queue
     Then The tryEditor box appears in Queue
-    When User type code "x=x+1" in the tryEditor
-    Then User clicks Run button and Error alert message is displayed and accepted
+    When User type code "x=x+1" in the tryEditor in Queue
+    Then User clicks Run button and Error alert message is displayed and accepted in Queue
