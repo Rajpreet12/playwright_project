@@ -4,7 +4,7 @@ const {expect} = require('@playwright/test');
 
   //Implementation in Stack page
   Given('The user select stack item from Getstarted icon', async function () {
-
+      this.stacksPage = this.poManger.getStackPage();
       await this.homepage.getStartStack_fn();
 
     });
@@ -27,7 +27,7 @@ const {expect} = require('@playwright/test');
   });
 
   When('The user clicks Try Here in stack', async function () {
-    
+      
         await this.stacksPage.tryhere_stack_fn();
   });
 
@@ -38,7 +38,7 @@ const {expect} = require('@playwright/test');
   });
 
   When('User type code {string} in the tryEditor', async function (phythonCode) {
-        
+      this.stacksPage = this.poManger.getStackPage();
         await this.stacksPage.codeTryArea_stack_fn(phythonCode);
     
   });
