@@ -7,17 +7,18 @@ module.exports = {
     //     './features/step_definitions/*.js',
     //     './features/support/hooks/*.js',
       // ],
-      // paths: [
-      //   //'./features/*.feature',
-        
-      // ],
+       paths: [
+        './features/*.feature',
+      ],
     format: [
       'json:reports/cucumber-report.json',
-      'html:reports/report.html',
+      'html:reports/CucumberHtmlReport.html',
       'summary',
       'progress-bar'
-      //path.join(__dirname, 'reporter.js')
+      //path.resolve(__dirname, 'reporter.js') 
+      //,
+     // 'path.resolve(__dirname, "reporter.js")'
     ],
-    
+   // publishQuiet: true
   },
 };

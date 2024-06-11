@@ -6,7 +6,7 @@ class Reporter extends CucumberJSAllureFormatter {
     super(
       options,
       new AllureRuntime({
-        resultsDir: path.resolve(__dirname, "allure-results"),
+        resultsDir: path.resolve(__dirname, "reports/allure-results"),
       }),
       {},
     );
