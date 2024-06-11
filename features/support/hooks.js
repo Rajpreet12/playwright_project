@@ -6,7 +6,7 @@ const {POManager}= require('../../pageobjects/POManager');
 
 Before(async function () {
     const browser = await chromium.launch({  // Change 'playwright.firefox' to 'firefox.launch'
-        headless: false
+        headless: true
     });
     const context = await browser.newContext(); // Define 'context' using 'const'
     this.page = await context.newPage();
