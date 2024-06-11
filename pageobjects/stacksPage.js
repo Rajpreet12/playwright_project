@@ -5,6 +5,7 @@ class stacksPage{
         this.stack_getStart = page.locator("a[href='stack']");
         this.oprtn_stack = page.getByRole('link', { name: 'Operations in Stack' });
         this.implemntn_stack = page.getByRole('link', {name:'Implementation'});
+        this.applicatn_stack = page.getByRole('link', {name:'Applications'});
         this.tryHere_stack = page.locator('.btn.btn-info');
         this.codeEditor = page.locator(".CodeMirror.cm-s-default");
         this.runBtn_stack = page.getByRole('button', { name: 'Run' });
@@ -26,6 +27,26 @@ class stacksPage{
     async implementatin_stack_fn(){
         this.implemntn_stack.click();
     }
+
+    async subTitles_stack_fn(subTitles){
+
+        switch(subTitles.toLowerCase()){
+            case("operations in stack"):
+                await this.oprtn_stack.click();
+                break;
+            case("implementation"):
+                await this.implemntn_stack.click();
+                break;
+            case("applications"):
+                await this.applicatn_stack.click();
+                break;
+
+        }
+        
+    }
+
+
+
     async tryhere_stack_fn(){
         this.tryHere_stack.click();
     }

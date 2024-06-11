@@ -15,15 +15,15 @@ const {stacksPage} = require('../../pageobjects/stacksPage');
     });
 
 
-  When('The user clicks on the Implementation in Stack link', async function () {
+  When('The user clicks on the {string} in Stack link', async function (subtitles) {
        //this.stacksPage = this.poManger.getStackPage();
        
-        await this.stacksPage.implementatin_stack_fn();
+        await this.stacksPage.subTitles_stack_fn(subtitles);
   });
 
-  Then('The user is directed to Implementation in Stack Page', async function () {
+  Then('The user is directed to {string} in Stack Page', async function (subtitles) {
 
-            await expect(this.page).toHaveTitle(/Implementation/);
+            await expect(this.page).toHaveTitle(subtitles);
         
   });
 
