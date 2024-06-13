@@ -8,11 +8,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
     "@playwright/test": "^1.44.0",
-    "@types/node": "^20.12.12"
+    "@types/node": "^20.12.12",
+    "allure-commandline": "^2.29.0",
+    "allure-cucumberjs": "^3.0.0-beta.3"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^10.8.0",
-    "exceljs": "^4.4.0"
+    "exceljs": "^4.4.0",
+    "path": "^0.12.7",
+    "stream": "^0.0.2"
   }
 }

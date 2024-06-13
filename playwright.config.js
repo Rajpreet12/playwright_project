@@ -8,10 +8,14 @@ const config={
   // expect:{
   //   TIMEOUT:15000
   // },
-  reporter:'html',
+  reporter:[
+      ['html'],
+      ['line'],
+      ['allure-playwright']
+  ],
   use: {
-    browserName:'firefox',
-    headless: false
+    //browserName:'firefox',
+    headless: true
   },
 };
 module.exports=config;

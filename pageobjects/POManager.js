@@ -5,6 +5,7 @@ const {Arraypage} = require('./Arraypage');
 const {linkpage}= require('./linkpage');
 const {stacksPage} = require('./stacksPage');
 const {queuePage} = require('./queuePage');
+const {treePage} = require('./treePage');
 
 class POManager {
     constructor(page) {
@@ -16,6 +17,7 @@ class POManager {
        // this.signinPage = new signinPage(page);
         this.stacksPage = new stacksPage(page);
         this.queuePage = new queuePage(page);
+        this.treePage = new treePage(page);
     }
 
     getLoginPage() {
@@ -38,6 +40,9 @@ class POManager {
     }
     getQueuePage(){
         return this.queuePage;
+    }
+    gettreePage(){
+        return this.treePage;
     }
 }
 
